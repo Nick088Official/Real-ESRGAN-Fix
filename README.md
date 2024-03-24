@@ -58,7 +58,7 @@ Other recommended projects:<br>
 
 <!---------------------------------- Updates --------------------------->
 ## 🚩 Updates
-
+- ✅ Fixed new-basicsr
 - ✅ Add the **realesr-general-x4v3** model - a tiny small model for general scenes. It also supports the **-dn** option to balance the noise (avoiding over-smooth results). **-dn** is short for denoising strength.
 - ✅ Update the **RealESRGAN AnimeVideo-v3** model. Please see [anime video models](docs/anime_video_model.md) and [comparisons](docs/anime_comparisons.md) for more details.
 - ✅ Add small models for anime videos. More details are in [anime video models](docs/anime_video_model.md).
@@ -103,11 +103,12 @@ Other recommended projects:<br>
     ```bash
     # Install basicsr - https://github.com/xinntao/BasicSR
     # We use BasicSR for both training and inference
-    pip install basicsr
     # facexlib and gfpgan are for face enhancement
     pip install facexlib
     pip install gfpgan
     pip install -r requirements.txt
+    pip uninstall -y basicsr
+    pip install new-basicsr
     python setup.py develop
     ```
 
